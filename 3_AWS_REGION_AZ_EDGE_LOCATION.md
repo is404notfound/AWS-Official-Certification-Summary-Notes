@@ -30,7 +30,25 @@
 
   - **리전과 가용영역 별로 구분한 WS서비스**
     - 리전이 존재하지 않은 서비스 : IAM / Amazon Cloud Front
-    - 리전에 속해있는 서비스 : VPC, S3
+    - 리전에 속해있는 서비스 : VPC, S3 (S3는 글로벌 서비스이나, 데이터가 각 리전에 종속되어있다)
     - 리전 내 가용영역A에 속해있는 서비스: RDS
     - 리전 내 가용영역B에 속해있는 서비스: EC2
 
+ - ** 엣지 로케이션 **
+   - AWS의 CloudFront(CDN, 임시 저장 공간)등의 서비스를 가장 빠르게 제공하기 위해 캐싱을 해 두는 거점
+   - 전 세계에 흩어져있음
+   - 메인 리전에 트래픽이 몰리는 걸 방지할 수 있고, 엣지 로케이션과 가까운 거점일수록 서비스를 더 빠른 속도로 제공 받을 수 있다
+   - CDN을 위한 거점
+  
+- 글로벌 서비스와 리전 서비스
+  - 글로벌 서비스 : 데이터와 서비스를 전 세계의 모든 인프라가 공유 (CloudFront, IAM, Route53, WAF)
+  - 지역 서비스 : 특정 리전을 기반으로 데이터 및 서비스를 제공 (대부분의 서비스, S3)
+ 
+- ARN (Amazon Resource Name)
+  - AWS의 리소스는 모두 ARN이 부여됨 
+  - Format
+    : arn:[partition]:[service]:[region]:[acount_id]:[resource_type]/resource_name/(qualifier)
+  - 예시
+    - arn:aws:s3:::test_bucket/text.txt
+    - arn:aws:dynamodb:ap_northeast_02:123456789012:table/*
+  - 위의 예시처럼 맨 끝에 와일드카드(*)를 붙여 다수의 리소스를 지정할 수 있다. (캐시 무효화 : /*) 
