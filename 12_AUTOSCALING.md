@@ -1,6 +1,6 @@
 # AWS에서 스케일링: Vertical Scaling (Scaling Up)
 
-AWS에서 **스케일링**은 시스템 성능을 유지하거나 향상시키기 위해 리소스를 동적으로 조정하는 과정입니다. 스케일링에는 크게 **Vertical Scaling (스케일 업)**과 **Horizontal Scaling (스케일 아웃)** 두 가지 유형이 있습니다. 이 문서에서는 **Vertical Scaling**과 **Horizental Scaling**, 그리고 **Auto Scaling**에 대해 설명합니다.
+AWS에서 **스케일링**은 시스템 성능을 유지하거나 향상시키기 위해 리소스를 동적으로 조정하는 과정입니다. 스케일링에는 크게 Vertical Scaling(스케일 업)과 Horizontal Scaling(스케일 아웃) 두 가지 유형이 있습니다. 이 문서에서는 **Vertical Scaling**과 **Horizental Scaling**, 그리고 **Auto Scaling**에 대해 설명합니다.
 
 ---
 
