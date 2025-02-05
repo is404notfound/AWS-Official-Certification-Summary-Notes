@@ -13,24 +13,24 @@ IPv4 기준으로 최대 IP 개수는 약 43억 개입니다.
 - 각각의 사설망은 공유기를 통해 라우팅됩니다.
 - IPv6는 주소 개수가 많아, 사설망 개념이 따로 없습니다.
 
-- **NAT (Network Address Translation)**
+### **NAT (Network Address Translation)**
 공인 IP (public ip)를 사설 IP로 바꿔주는, 즉 라우팅해주는 방법입니다.
 
-- **Dynamic NAT**
+### **Dynamic NAT**
 
 하나의 공인 IP를 사설 IP pool에서 하나의 사설 IP를 선택하여 매칭합니다.
 
-- **Static NAT**
+### **Static NAT**
 
 - 하나의 공인 IP에 하나의 사설 IP를 매핑합니다.
 - AWS Internet Gateway에서 사용하는 방식입니다.
   
-- **PAT (Port Address Translation)**
+### **PAT (Port Address Translation)**
 
 - 많은 사설 IP를 하나의 공인 IP에 매핑합니다.
 - NAT Gateway와 NAT Instance가 사용하는 방식입니다.
 
-- **CIDR (Classless Inter-Domain Routing)**
+### **CIDR (Classless Inter-Domain Routing)**
 
 - IP 주소 할당 및 라우팅 효율성을 향상시키기 위해 기존의 클래스 기반 주소 지정 방식(Class A, B, C 등)을 대체하는 기술입니다.
 - IP 주소의 영역을 여러 네트워크 영역으로 나누기 위해 IP를 묶는 방식
@@ -45,4 +45,4 @@ IPv4 기준으로 최대 IP 개수는 약 43억 개입니다.
   - 따라서 총 256개의 IP주소를 의미하게 된다.
 - 따라서 CIDR은 하나의 IP주소가 아닌, 여러 IP주소를 포함하는 범위를 나타내는 형식이다.
 
-- **서브넷**
+### **서브넷**
